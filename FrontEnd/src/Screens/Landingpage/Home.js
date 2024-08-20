@@ -8,7 +8,7 @@ function Home() {
       <header className="header">
         <nav className="navbar">
           <h2 className="logo">
-            <a href="#">CodingNepal</a>
+            <a href="#">Fusion AI</a>
           </h2>
           <input type="checkbox" id="menu-toggle" className="menuToggle" />
           <label htmlFor="menu-toggle" id="hamburger-btn" className="hamburgerBtn">
@@ -19,22 +19,20 @@ function Home() {
           <ul className="links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">How it Works</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
           <div className="buttons">
-            <a href="#" className="signin">Sign In</a>
-            <a href="#" className="signup">Sign Up</a>
+        
+            <a href="#" className="signup">Login</a>
           </div>
         </nav>
       </header>
       <section className="hero-section">
         <div className="hero">
-          <h2>Mobile App Development</h2>
+        <h2>Reveal Code Complexity</h2>
           <p>
-            Join us in the exciting world of programming and turn your ideas into reality. Unlock the world of endless possibilities - learn to code and shape the digital future with us.
-          </p>
+          Improve code comprehension with AI-powered analysis and comprehensive documentation. Our solution minimizes the time spent on manual documentation and code reviews.          </p>
           <div className="buttons">
             <a href="#" className="join">Join Now</a>
             <a href="#" className="learn">Learn More</a>
