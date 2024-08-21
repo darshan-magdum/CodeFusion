@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Landingpage/Styles/home.css';  
-import LandingpageImage from "../../../../FrontEnd/src/Images/LandingpageImage.png";
+import LandingpageImage from "../../Images/ContactImage.png";
 import AboutUs from "../Landingpage/AboutUs"
 import ContactUs from './ContactUs';
 function Home() {
