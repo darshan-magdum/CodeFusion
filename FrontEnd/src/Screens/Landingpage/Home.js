@@ -3,6 +3,8 @@ import '../Landingpage/Styles/home.css';
 import LandingpageImage from "../../Images/ContactImage.png";
 import AboutUs from "../Landingpage/AboutUs"
 import ContactUs from './ContactUs';
+import WorkFLow from './WorkFLow';
+
 function Home() {
   return (
     <>
@@ -50,7 +52,9 @@ function Home() {
 <ContactUs/> */}
     </div>
     <AboutUs/>
+    <WorkFLow/>
     <ContactUs/>
+ 
     </>
   );
 }
