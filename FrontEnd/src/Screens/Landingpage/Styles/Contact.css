@@ -1,0 +1,78 @@
+/* ContactUs.css */
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #007BFF 50%, #0056b3 50%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .image {
+    flex: 0 0 50%;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .form-container {
+    flex: 0 0 50%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .textarea {
+    height: 120px;
+  }
+  
