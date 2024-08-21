@@ -4,6 +4,7 @@ import LandingpageImage from "../../Images/ContactImage.png";
 import AboutUs from "../Landingpage/AboutUs";
 import ContactUs from './ContactUs';
 import WorkFLow from './WorkFLow';
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -27,7 +28,7 @@ function Home() {
               <li><a href="#contact-us">Contact Us</a></li>
             </ul>
             <div className="buttons">
-              <a href="#" className="signup">Login</a>
+              <Link to="/Login" className="signup">Login</Link>
             </div>
           </nav>
         </header>
@@ -38,8 +39,9 @@ function Home() {
               Improve code comprehension with AI-powered analysis and comprehensive documentation. Our solution minimizes the time spent on manual documentation and code reviews.
             </p>
             <div className="buttons">
-              <a href="#" className="join">Join Now</a>
-              <a href="#" className="learn">Learn More</a>
+           
+              <Link to="/signup" className="join">Join Now</Link>
+              
             </div>
           </div>
           <div className="img">
@@ -50,6 +52,7 @@ function Home() {
         <section id="about-us">
           <AboutUs />
         </section>
+        <br></br>  <br></br>       <br></br>  <br></br>
         <section id="workflow">
           <WorkFLow />
         </section>
