@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Landingpage/Styles/home.css';  
-import LandingpageImage from "../../Images/ContactImage.png";
+import LandingpageImage from "../../Images/LandingpageImage.png";
 import AboutUs from "../Landingpage/AboutUs";
 import ContactUs from './ContactUs';
 import WorkFLow from './WorkFLow';
@@ -52,9 +52,10 @@ function Home() {
         <section id="about-us">
           <AboutUs />
         </section>
-        <br></br>  <br></br>       <br></br>  <br></br>
+        <br></br>  <br></br>    
         <section id="workflow">
           <WorkFLow />
+          <br></br>  <br></br>
         </section>
         <section id="contact-us">
           <ContactUs />

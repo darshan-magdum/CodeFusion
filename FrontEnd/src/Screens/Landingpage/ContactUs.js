@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../Screens/Landingpage/Styles/Contact.css'; // Import the CSS file
+import '../../Screens/Landingpage/Styles/Contact.css'; 
 import ContactImage from '../../../../FrontEnd/src/Images/ContactImage.png'; 
 
 const ContactUs = () => {
