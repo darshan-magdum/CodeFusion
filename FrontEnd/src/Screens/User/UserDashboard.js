@@ -6,7 +6,7 @@ import RightContainer from './RightContainer';
 
 const UserDashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeView, setActiveView] = useState('home');
+  const [activeView, setActiveView] = useState('UploadCode');
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

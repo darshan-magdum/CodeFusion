@@ -1,24 +1,26 @@
 import React from 'react';
-
+import UploadCode from './UploadCode';
+import ViewDocumentation from './ViewDocumentation';
+import Chat  from "./Chat";
+import ChatHistory from "./ChatHistory";
 
 const RightContainer = ({ activeView }) => {
   const renderComponent = () => {
     switch (activeView) {
-    //   case 'home':
-    //     return <AdminHome />;
-    //   case 'profile':
-    //     return <AdminProfileView />;
-    //   case 'changePassword':
-    //     return <AdminChangePassword />;
-    //   case 'messages':
-    //     return <AdminViewMessages />;
-    //   case 'restaurant':
-    //     return <CreateRestaurantAccount />;
-    //     case 'manageRestaurant':
-    //       return <ManageRestaurants />;
+      case 'UploadCode':
+        return <UploadCode />;
+        case 'viewDocumentation':
+          return <ViewDocumentation />;
+          case 'chat':
+            return <Chat />;
+            case 'chatHistory':
+              return <ChatHistory />;
+            case 'UploadCode':
+              return <UploadCode />;
+ 
         
-    //   default:
-    //     return <AdminHome />;
+      default:
+        return <UploadCode />;
     }
   };
 
