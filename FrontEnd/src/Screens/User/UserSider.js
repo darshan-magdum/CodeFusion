@@ -20,8 +20,8 @@ const UserSider = ({ isOpen, toggleSidebar, onSelectView }) => {
 </header>
 
       <nav className="dashboard-nav-list">
-        <a href="#!" className="dashboard-nav-item" onClick={() => onSelectView('uploadFolder')}>
-          <i className="fas fa-upload"></i> Upload Folder
+        <a href="#!" className="dashboard-nav-item" onClick={() => onSelectView('UploadCode')}>
+          <i className="fas fa-upload"></i> Upload Code
         </a>
         <a href="#!" className="dashboard-nav-item" onClick={() => onSelectView('viewDocumentation')}>
           <i className="fas fa-file-alt"></i> View Documentation
