@@ -100,17 +100,7 @@ const Login = () => {
               </button>
             </form>
             {error && <p className="text-danger">{error}</p>}
-            <p className="terms">
-              Don't have an account?
-              <span className="terms-highlight">
-                &nbsp;
-                <Link to="/Signup" style={{ color: "rgb(255, 122, 122)" }}>
-                  sign up
-                </Link>
-              </span>
-              <br />
-              {/* <Link to="/ForgotPassword">Forgot Password?</Link> */}
-            </p>
+         <br></br>
           </div>
         </div>
       </div>

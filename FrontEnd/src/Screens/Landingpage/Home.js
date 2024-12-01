@@ -38,11 +38,7 @@ function Home() {
             <p>
               Improve code comprehension with AI-powered analysis and comprehensive documentation. Our solution minimizes the time spent on manual documentation and code reviews.
             </p>
-            <div className="buttons">
-           
-              <Link to="/signup" className="join">Join Now</Link>
-              
-            </div>
+         
           </div>
           <div className="img">
             <img src={LandingpageImage} alt="Landing Page" />

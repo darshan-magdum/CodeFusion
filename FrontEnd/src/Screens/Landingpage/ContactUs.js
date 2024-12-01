@@ -1,8 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import '../../Screens/Landingpage/Styles/Contact.css'; 
 import ContactImage from '../../../../FrontEnd/src/Images/ContactImage.png'; 
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    contactNo: "",
+    description: ""
+  });
+  
+  const [errorMessage, setErrorMessage] = useState(""); 
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage(""); 
+    try {
+      await axios.post("http://localhost:8080/Contact/AddContact", formData);
+      toast.success("Contact Sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        contactNo: "",
+        description: ""
+      });
+    } catch (error) {
+      setErrorMessage(error.response.data); 
+      toast.error("There was an error submitting the form.");
+    }
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -49,25 +84,58 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="col-md-7">
-          <form>
-          <div className="form-group">
-      <input type="text" className="form-control" placeholder="Name" />
-    </div>
-    <div className="form-group">
-      <input type="email" className="form-control" placeholder="Email" />
-    </div>
-  <div className="form-group">
-    <input type="text" className="form-control" placeholder="Subject" />
-  </div>
-  <div className="form-group">
-    <textarea className="form-control" rows="5" placeholder="Message"></textarea>
-  </div>
-  <button className="btn btn-block" type="submit">Send Now!</button>
-</form>
-
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input 
+                  type="text" 
+                  className="form-control" 
+                  name="name" 
+                  placeholder="Name" 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="email" 
+                  className="form-control" 
+                  name="email" 
+                  placeholder="Email" 
+                  value={formData.email} 
+                  onChange={handleChange} 
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <input 
+                  type="text" 
+                  className="form-control" 
+                  name="contactNo" 
+                  placeholder="Contact No" 
+                  value={formData.contactNo} 
+                  onChange={handleChange} 
+                  required 
+                />
+              </div>
+              <div className="form-group">
+                <textarea 
+                  className="form-control" 
+                  rows="5" 
+                  name="description" 
+                  placeholder="Message" 
+                  value={formData.description} 
+                  onChange={handleChange} 
+                  required 
+                ></textarea>
+              </div>
+              {errorMessage && <p className="text-danger">{errorMessage}</p>} 
+              <button className="btn btn-block" type="submit">Send Now!</button>
+            </form>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
