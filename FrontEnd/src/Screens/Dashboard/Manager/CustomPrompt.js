@@ -17,7 +17,7 @@ const CustomPrompt = () => {
   const [selectedProject, setSelectedProject] = useState("");
   const textareaRef = useRef(null);
 
-  const azureApiKey = '';
+  const azureApiKey = 'daf99a54e98144328812c4e1a1a4fea6';
   useEffect(() => {
     // Retrieve managerId from localStorage when component mounts
     const id = localStorage.getItem("userId");
@@ -198,7 +198,7 @@ Analyzed code (Part {partNumber}):\n\n`;
 
       while (attempt < 3 && !success) { // Retry up to 3 times
         try {
-          const response = await fetch('your api', {
+          const response = await fetch('https://tesaooenai-service.openai.azure.com/openai/deployments/code-reverse-engineering-deployment/chat/completions?api-version=2023-03-15-preview', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
